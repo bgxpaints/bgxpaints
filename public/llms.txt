@@ -5,7 +5,6 @@ BGX Paints is een schildersbedrijf in Oostende, België. De zaak is van Bekim G�
 ## Feiten (NL)
 
 - Handelsnaam: BGX Paints
-- Eerdere naam: Eki Schilder (zelfde zaak, zelfde adres, zelfde telefoon)
 - Rechtspersoon: Gërxhaliu, Bekim
 - BTW / ondernemingsnummer: BE0698585981
 - Adres: Zwaluwenstraat 47, 8400 Oostende, België
@@ -22,7 +21,6 @@ BGX Paints is een schildersbedrijf in Oostende, België. De zaak is van Bekim G�
 ## Facts (EN)
 
 - Brand: BGX Paints
-- Former name: Eki Schilder (same painter, same address, same phone)
 - Legal name: Gërxhaliu, Bekim
 - VAT: BE0698585981
 - Address: Zwaluwenstraat 47, 8400 Ostend, Belgium

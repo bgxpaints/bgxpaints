@@ -24,11 +24,11 @@
   - Paints used: **Boss, Sigma, Sikkens, Mathys**
   - Tone to keep (sharper, less filler): snel, net, kwaliteit, communicatie
 - Copy to drop: repeated “Op zoek naar…” blocks, empty claims, “Transformeer uw huis in één dag!” unless you confirm that is always true.
-- Duplicate site exists: [ekischilder.com](https://www.ekischilder.com/) uses the same copy under the old name. New site must make **BGX Paints** the canonical brand and treat **Eki Schilder** as `alternateName` so listings stay consistent.
+- Duplicate site exists under an old name. Public brand is **BGX Paints** only. Do **not** add a former name as `alternateName` or visible copy.
 
 ### NAP found in directories (confirm before ship)
 
-- Listing name: **Eki Schilder**
+- Listing name: **BGX Paints** (directories may still show a stale former name; the site does not)
 - Address: **Zwaluwenstraat 47, 8400 Oostende**
 - Phone matches the website
 - Hours are **24/7** on Google Maps. Site must match: bereikbaar 24 uur per dag.
@@ -301,10 +301,10 @@ P0 gates for this build:
 
 ## Review
 
-- Changes: Light Dutch-only Next.js site. Confirmed NAP (Zwaluwenstraat 47, BE0698585981, Gërxhaliu Bekim, info@bgxpaints.be, 24/7). Real job photos. No city doorway pages. No monumentaal. No old Eki email.
+- Changes: Light Dutch-only Next.js site. Confirmed NAP (Zwaluwenstraat 47, BE0698585981, Gërxhaliu Bekim, info@bgxpaints.be, 24/7). Real job photos. No city doorway pages. No monumentaal. Brand is BGX Paints only.
 - Routes shipped: `/` `/diensten` `/diensten/binnen` `/diensten/buiten` `/diensten/spuitwerk` `/realisaties` `/werkgebied` `/over` `/contact` `/privacy` plus 301s from old English slugs.
 - Verification: `npm run build` OK. Browser: home, contact form fill, realisaties, over (via `/about` 301), binnen, privacy, werkgebied. Mobile 320: no overflow. Sticky Bel/Offerte present.
-- Open risks: Form uses mailto (needs a mail app). Align remaining directories that still say Eki Schilder / old email. Point `bgxpaints.be` DNS to this deploy when ready.
+- Open risks: Form uses mailto (needs a mail app). Align remaining directories that still show a stale former name / old email. Point `bgxpaints.be` DNS to this deploy when ready.
 
 ---
 
@@ -317,7 +317,7 @@ Selected skills: `dco-gate`, `seo-ai-visibility-framework`. Google docs re-check
 - [x] Indexable robots + sitemap (allow Google, Bing, GPTBot, Claude, Perplexity)
 - [x] Unique title + meta + canonical + OG/Twitter per page
 - [x] People-first: no city doorway pages, no fake reviews/ratings
-- [x] Entity: NAP + Eki Schilder as visible former name + `alternateName`
+- [x] Entity: NAP + brand **BGX Paints** only (no former-name `alternateName`)
 - [x] GEO: lat/long 51.21763, 2.90858 + `hasMap` + areaServed cities
 - [x] Extractable FAQ (visible + FAQPage) including prijs and kustklimaat
 - [x] Service JSON-LD on binnen/buiten/spuitwerk matching visible copy
@@ -338,6 +338,56 @@ Selected skills: `dco-gate`, `seo-ai-visibility-framework`. Google docs re-check
 - Keyword-stuffed city clones
 - Fake reviews or fake ratings in schema
 - Dark theme
-- Duplicate `ekischilder.com` copy pasted under a new logo
+- Duplicate copy from a former-brand site pasted under a new logo
 - Extra component libraries, animation libraries, or CMS
 - Dead code, unused helpers, comments that repeat the code
+
+---
+
+## Brand cleanup: BGX Paints only (2026-09-17)
+
+**Status:** executed (no commit)
+
+### Checklist
+
+- [x] Search repo for former-brand strings in code, content, schema, `llms.txt`, `tasks/todo.md`
+- [x] Remove former-brand copy from `app/over/page.tsx`
+- [x] Remove former-brand from `site.alternateNames` / schema `alternateName`
+- [x] Remove former-brand lines from `public/llms.txt`
+- [x] Keep legal name Gërxhaliu, Bekim and the same NAP
+- [x] Do not add former name as current `alternateName`
+- [x] No city doorway pages, no fake reviews
+- [x] Production build, then Cloudflare deploy if build succeeds
+- [x] No git commit or push
+
+### Review
+
+- Public brand is **BGX Paints** only. Schema `alternateName` is only `BGX PAINTS` (casing variant), not a former trading name.
+- Legal name and NAP unchanged: Gërxhaliu, Bekim; Zwaluwenstraat 47, 8400 Oostende; BE0698585981; info@bgxpaints.be.
+- Do not reintroduce a former name in user-visible copy, `llms.txt`, or JSON-LD. That confuses Google/AI entity matching.
+
+---
+
+## Mobile menu stays open after navigate (2026-09-17)
+
+**Status:** executed (no commit)
+
+The header uses native `<details>`. Next.js App Router keeps the layout mounted, so the menu stayed open after a tap to Diensten. Closing the panel in the same click hid the link and could cancel navigation. Close after the route changes instead.
+
+### Checklist
+
+- [x] Close mobile `<details>` on pathname change
+- [x] Close on same-route nav/logo tap only (do not hide the link mid-click)
+- [x] Close on Escape
+- [x] Keep native disclosure (no extra menu library)
+- [x] Verify mobile viewport: open Menu → Diensten → panel gone, page visible
+- [x] Deploy live Worker after verify
+
+### Review
+
+- `components/Header.tsx` is a client header. Menu closes when `usePathname()` changes, so the new page is visible.
+- Same-route taps (already on Diensten, logo on home) still close the panel.
+- Escape closes the panel.
+- Do not close the `<details>` in the same click as a new-route `Link`. That can swallow the navigation.
+- Verified locally on 390×844: Menu → Diensten (navigates + closes), same-route Diensten (closes), Menu → Contact (navigates + closes).
+- Deployed Worker `bgxpaints` version `8fbd931f-aed6-44eb-9e26-dcde4cb23e7c`. Not committed.

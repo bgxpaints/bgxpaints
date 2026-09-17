@@ -17,7 +17,7 @@ export const site = {
     "https://maps.apple.com/?address=Zwaluwenstraat%2047,%208400%20Oostende,%20Belgium",
   mapsEmbed:
     "https://maps.google.com/maps?q=BGX%20PAINTS%2C%20Zwaluwenstraat%2047%2C%208400%20Oostende&hl=nl&z=16&output=embed",
-  alternateNames: ["BGX PAINTS", "Eki Schilder"] as const,
+  alternateNames: ["BGX PAINTS"] as const,
   geo: {
     latitude: 51.21763,
     longitude: 2.90858,
