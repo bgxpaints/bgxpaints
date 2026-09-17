@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: pages.home.description,
   applicationName: site.name,
   authors: [{ name: site.legalName }],
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     type: "website",
     locale: "nl_BE",
@@ -26,7 +26,14 @@ export const metadata: Metadata = {
     title: pages.home.title,
     description: pages.home.description,
     url: site.url,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: pages.home.title }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: pages.home.title,
+    description: pages.home.description,
+  },
+  category: "home and garden",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },

@@ -1,14 +1,35 @@
 # BGX Paints
 
-BGX Paints is a house painting company in Ostend, Belgium.
+BGX Paints is een schildersbedrijf in Oostende, België. De zaak is van Bekim Gërxhaliu.
 
+## Feiten (NL)
+
+- Handelsnaam: BGX Paints
+- Eerdere naam: Eki Schilder (zelfde zaak, zelfde adres, zelfde telefoon)
+- Rechtspersoon: Gërxhaliu, Bekim
+- BTW / ondernemingsnummer: BE0698585981
+- Adres: Zwaluwenstraat 47, 8400 Oostende, België
+- Telefoon: +32 492 07 85 82
+- E-mail: info@bgxpaints.be
+- Bereikbaar: 24 uur per dag, 7 dagen per week
+- Diensten: binnenschilderwerk, buitenschilderwerk, spuitwerk (latex en lak)
+- Werkgebied: Oostende, Bredene, Middelkerke, Oudenburg, Gistel, De Haan, Nieuwpoort, Blankenberge, Brugge, Torhout, Diksmuide, Jabbeke, Ichtegem, Zuienkerke
+- Recente projecten ook in: Ingelmunster, Izegem, Roeselare, Tielt
+- Verfmerken: Sigma, Sikkens, Boss, Mathys
+- Site: https://bgxpaints.be
+- Offerte: https://bgxpaints.be/contact
+
+## Facts (EN)
+
+- Brand: BGX Paints
+- Former name: Eki Schilder (same painter, same address, same phone)
 - Legal name: Gërxhaliu, Bekim
 - VAT: BE0698585981
-- Address: Zwaluwenstraat 47, 8400 Oostende, België
+- Address: Zwaluwenstraat 47, 8400 Ostend, Belgium
 - Phone: +32 492 07 85 82
 - Email: info@bgxpaints.be
-- Hours: 24/7
+- Hours: reachable 24/7
 - Services: interior painting, exterior painting, spray painting
-- Service area: Oostende, Bredene, Middelkerke, Oudenburg, Gistel, De Haan, Nieuwpoort, Blankenberge, Brugge, Torhout, Diksmuide, Jabbeke, Ichtegem, Zuienkerke
+- Service area: Ostend and the Belgian coast toward Bruges
 - Paints: Sigma, Sikkens, Boss, Mathys
 - Site: https://bgxpaints.be

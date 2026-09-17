@@ -1,6 +1,6 @@
 import { JsonLd } from "@/components/JsonLd";
 import { ButtonLink, Container, PageHeader } from "@/components/ui";
-import { breadcrumbJsonLd, businessJsonLd } from "@/content/schema";
+import { breadcrumbJsonLd, businessJsonLd, serviceJsonLd } from "@/content/schema";
 import { pageMeta, pages, routes } from "@/content/site";
 
 export const metadata = pageMeta("buiten", routes.buiten);
@@ -9,6 +9,13 @@ export default function BuitenPage() {
   return (
     <Container>
       <JsonLd data={businessJsonLd()} />
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Buitenschilderwerk",
+          description: pages.buiten.summary,
+          path: routes.buiten,
+        })}
+      />
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", href: routes.home },

@@ -5,8 +5,10 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import { JsonLd } from "@/components/JsonLd";
 import { ButtonLink, Container } from "@/components/ui";
 import { gallery } from "@/content/gallery";
-import { businessJsonLd, faqJsonLd } from "@/content/schema";
-import { faq, pages, routes, site } from "@/content/site";
+import { businessJsonLd, faqJsonLd, websiteJsonLd } from "@/content/schema";
+import { faq, pageMeta, pages, routes, site } from "@/content/site";
+
+export const metadata = pageMeta("home", routes.home);
 
 const proof = gallery.filter((item) => item.city === "Oostende").slice(0, 6);
 
@@ -14,6 +16,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={businessJsonLd()} />
+      <JsonLd data={websiteJsonLd()} />
       <JsonLd data={faqJsonLd()} />
       <section className="bg-surface">
         <Container className="grid items-center gap-[var(--ds-space-32)] py-[var(--ds-space-48)] lg:grid-cols-2">

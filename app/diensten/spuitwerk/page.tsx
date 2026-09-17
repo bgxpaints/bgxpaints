@@ -1,6 +1,6 @@
 import { JsonLd } from "@/components/JsonLd";
 import { ButtonLink, Container, PageHeader } from "@/components/ui";
-import { breadcrumbJsonLd, businessJsonLd } from "@/content/schema";
+import { breadcrumbJsonLd, businessJsonLd, serviceJsonLd } from "@/content/schema";
 import { pageMeta, pages, routes } from "@/content/site";
 
 export const metadata = pageMeta("spuitwerk", routes.spuitwerk);
@@ -9,6 +9,13 @@ export default function SpuitwerkPage() {
   return (
     <Container>
       <JsonLd data={businessJsonLd()} />
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Spuitwerk",
+          description: pages.spuitwerk.summary,
+          path: routes.spuitwerk,
+        })}
+      />
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", href: routes.home },

@@ -13,8 +13,15 @@ export const site = {
   url: "https://bgxpaints.be",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=BGX+PAINTS+Zwaluwenstraat+47+8400+Oostende",
+  appleMapsUrl:
+    "https://maps.apple.com/?address=Zwaluwenstraat%2047,%208400%20Oostende,%20Belgium",
   mapsEmbed:
     "https://maps.google.com/maps?q=BGX%20PAINTS%2C%20Zwaluwenstraat%2047%2C%208400%20Oostende&hl=nl&z=16&output=embed",
+  alternateNames: ["BGX PAINTS", "Eki Schilder"] as const,
+  geo: {
+    latitude: 51.21763,
+    longitude: 2.90858,
+  },
   hoursLabel: "24 uur per dag, 7 dagen per week",
   brands: ["Sigma", "Sikkens", "Boss", "Mathys"] as const,
   address: {
@@ -155,16 +162,26 @@ export const pages = {
 
 export function pageMeta(key: keyof typeof pages, path: string): Metadata {
   const page = pages[key];
+  const canonical = path === "/" ? site.url : `${site.url}${path}`;
   return {
     title: page.title,
     description: page.description,
-    alternates: { canonical: path },
+    alternates: {
+      canonical: path,
+      languages: { "nl-BE": path, "x-default": path },
+    },
     openGraph: {
       title: page.title,
       description: page.description,
       locale: "nl_BE",
       type: "website",
-      url: path,
+      url: canonical,
+      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: page.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.title,
+      description: page.description,
     },
   };
 }
@@ -189,5 +206,13 @@ export const faq = [
   {
     q: "Werken jullie ook voor bedrijven?",
     a: "Ja. We schilderen woningen en bedrijfspanden. Facturatie kan via Peppol (0208:0698585981).",
+  },
+  {
+    q: "Wat kost een schilder in Oostende?",
+    a: "De prijs hangt af van oppervlakte, staat van de ondergrond en of het binnen of buiten is. We kijken eerst ter plaatse of via foto’s en geven daarna een vrijblijvende offerte. Geen catalogusprijs per m² zonder de werf te zien.",
+  },
+  {
+    q: "Schilderen jullie gevels in het kustklimaat?",
+    a: "Ja. Buitenwerk in Oostende en de kustregio vraagt een systeem tegen zout, wind en vocht. We zetten geen binnenlatex op een gevel.",
   },
 ];

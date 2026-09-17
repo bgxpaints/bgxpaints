@@ -20,7 +20,8 @@ export default function OverPage() {
         <p>
           BGX Paints is het schildersbedrijf van Bekim Gërxhaliu. De zaak startte op{" "}
           {site.startedLabel} en is gevestigd op {site.address.line}. Ondernemingsnummer{" "}
-          {site.vat}.
+          {site.vat}. Eerder was dezelfde zaak bekend als Eki Schilder: zelfde schilder, zelfde
+          adres, zelfde telefoon.
         </p>
         <p className="mt-[var(--ds-space-16)]">
           We schilderen woningen en bedrijfspanden: muren, plafonds, ramen, deuren en duurzame

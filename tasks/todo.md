@@ -308,6 +308,31 @@ P0 gates for this build:
 
 ---
 
+## SEO / GEO / AEO / AIO (2026-09-17)
+
+Selected skills: `dco-gate`, `seo-ai-visibility-framework`. Google docs re-checked 2026-09-17.
+
+### Checklist
+
+- [x] Indexable robots + sitemap (allow Google, Bing, GPTBot, Claude, Perplexity)
+- [x] Unique title + meta + canonical + OG/Twitter per page
+- [x] People-first: no city doorway pages, no fake reviews/ratings
+- [x] Entity: NAP + Eki Schilder as visible former name + `alternateName`
+- [x] GEO: lat/long 51.21763, 2.90858 + `hasMap` + areaServed cities
+- [x] Extractable FAQ (visible + FAQPage) including prijs and kustklimaat
+- [x] Service JSON-LD on binnen/buiten/spuitwerk matching visible copy
+- [x] Bilingual `llms.txt` for AI crawlers / ChatGPT-style retrieval
+- [x] Schema matches visible content only
+
+### Compliance packet
+
+- Change: AI/search visibility layer on existing Dutch pages
+- Pre-work: Google starter, spam, SD policies, LocalBusiness re-opened
+- Exceptions: none
+- DCO: APPROVED for this layer (no new UI chrome, existing FAQ pattern)
+
+---
+
 ## What I will not do
 
 - Keyword-stuffed city clones
