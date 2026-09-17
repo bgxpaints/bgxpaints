@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bgxpaints",
+  "main": ".open-next/worker.js",
+  "account_id": "edd8a7aa29aab0cf48a74b551353613f",
+  "compatibility_date": "2026-09-17",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "bgxpaints"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "routes": [
+    { "pattern": "bgxpaints.be", "custom_domain": true },
+    { "pattern": "www.bgxpaints.be", "custom_domain": true }
+  ]
+}

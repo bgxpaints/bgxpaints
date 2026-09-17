@@ -1,0 +1,14 @@
+# BGX Paints
+
+BGX Paints is a house painting company in Ostend, Belgium.
+
+- Legal name: Gërxhaliu, Bekim
+- VAT: BE0698585981
+- Address: Zwaluwenstraat 47, 8400 Oostende, België
+- Phone: +32 492 07 85 82
+- Email: info@bgxpaints.be
+- Hours: 24/7
+- Services: interior painting, exterior painting, spray painting
+- Service area: Oostende, Bredene, Middelkerke, Oudenburg, Gistel, De Haan, Nieuwpoort, Blankenberge, Brugge, Torhout, Diksmuide, Jabbeke, Ichtegem, Zuienkerke
+- Paints: Sigma, Sikkens, Boss, Mathys
+- Site: https://bgxpaints.be

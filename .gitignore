@@ -1,0 +1,12 @@
+.next
+.open-next
+.wrangler
+node_modules
+.firecrawl
+out
+*.log
+.DS_Store
+.env
+.env.local
+.dev.vars
+scripts/cf-onboard.mjs
