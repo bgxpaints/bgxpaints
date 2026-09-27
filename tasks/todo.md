@@ -391,3 +391,35 @@ The header uses native `<details>`. Next.js App Router keeps the layout mounted,
 - Do not close the `<details>` in the same click as a new-route `Link`. That can swallow the navigation.
 - Verified locally on 390×844: Menu → Diensten (navigates + closes), same-route Diensten (closes), Menu → Contact (navigates + closes).
 - Deployed Worker `bgxpaints` version `8fbd931f-aed6-44eb-9e26-dcde4cb23e7c`. Not committed.
+
+---
+
+## White logo mark (2026-09-27)
+
+**Status:** executing
+
+The footer mark (`bgxpaints_logo_only.svg`) is the current roller. PNG copies used as favicon, Apple icon, and schema logo were the same roller on black. Google does not use SVG favicons, so search kept an older icon.
+
+### Checklist
+
+- [x] White background on `bgxpaints_logo_only.svg`
+- [x] Replace black PNGs (mark, wordmark, Apple icon) with the white versions
+- [x] Link a 192×192 PNG favicon (Google requires a square multiple of 48px)
+- [x] Deploy so bgxpaints.be serves the white icons
+
+### Review
+
+- Footer and favicon use the roller on white. Wordmark PNG used in schema is white, not black.
+- Live Worker version `dc50357b-6d18-408f-ad64-e6667c93501c`. Homepage links `/icon-192.png` first.
+- Google’s search icon updates on its own crawl. The browser tab updates after a hard refresh.
+
+---
+
+## IndexNow (2026-09-27)
+
+**Status:** live
+
+- Key file: `https://bgxpaints.be/3d3e8abaa5e06a8f876a3767059ef92b.txt`
+- `npm run deploy` submits the live sitemap to `https://api.indexnow.org/indexnow`
+- First submit returned **202** (accepted, key check pending) for 10 URLs
+- Worker version `6d4c1399-a3b4-412a-99f9-0e01532fc764`
